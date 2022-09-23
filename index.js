@@ -83,7 +83,7 @@ const calc = {
 
 number.forEach((num) => {
   num.addEventListener("click", () => {
-    if (calc.currentValue.length < 20) {
+    if (calc.currentValue.length < 15) {
       calc.currentValue += num.textContent;
     }
     calc.display();
