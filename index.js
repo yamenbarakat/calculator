@@ -78,13 +78,6 @@ const calc = {
     }
     previousElementValue.textContent = this.previousValue + this.operand;
 
-    if (
-      this.currentValue === "0" &&
-      this.previousValue === "" &&
-      this.operand === ""
-    ) {
-      this.currentValue = "";
-    }
   },
 };
 
