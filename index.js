@@ -83,7 +83,9 @@ const calc = {
 
 number.forEach((num) => {
   num.addEventListener("click", () => {
-    calc.currentValue += num.textContent;
+    if (calc.currentValue.length < 15) {
+      calc.currentValue += num.textContent;
+    }
     calc.display();
   });
 });
