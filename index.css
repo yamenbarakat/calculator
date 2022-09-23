@@ -57,3 +57,10 @@ body {
 .calc .equal {
   background-color: #9d1d45;
 }
+
+@media (max-width: 518px) {
+  .calc {
+    width: 350px;
+  }
+}
+
