@@ -29,7 +29,12 @@ const calc = {
   },
 
   setOperation: function (operand) {
-    if (this.currentValue === "" && this.operand === "") return;
+    if (
+      this.currentValue === "" &&
+      this.operand === "" &&
+      this.previousValue === ""
+    )
+      return;
 
     if (this.previousValue === "") {
       this.previousValue = this.currentValue;
@@ -77,7 +82,6 @@ const calc = {
       currentElementValue.textContent = this.currentValue;
     }
     previousElementValue.textContent = this.previousValue + this.operand;
-
   },
 };
 
