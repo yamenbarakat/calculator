@@ -14,16 +14,12 @@ const calc = {
   compute: function (current, prev) {
     switch (this.operand) {
       case "+":
-        console.log(prev, current);
         return +prev + +current;
       case "-":
-        console.log(+prev, +current);
         return +prev - +current;
       case "×":
-        console.log(+prev * +current);
         return +prev * +current;
       case "÷":
-        console.log(+prev / +current);
         return +prev / +current;
     }
   },
