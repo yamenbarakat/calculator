@@ -11,15 +11,19 @@ const calc = {
   operand: "",
   pressEqual: false,
 
-  compute: function (prev, current) {
+  compute: function (current, prev) {
     switch (this.operand) {
       case "+":
+        console.log(prev, current);
         return +prev + +current;
       case "-":
+        console.log(+prev, +current);
         return +prev - +current;
       case "×":
+        console.log(+prev * +current);
         return +prev * +current;
       case "÷":
+        console.log(+prev / +current);
         return +prev / +current;
     }
   },
@@ -35,8 +39,8 @@ const calc = {
       this.operand = operand.textContent;
     } else {
       this.previousValue = this.compute(
-        this.previousValue,
-        this.currentValue
+        this.currentValue,
+        this.previousValue
       ).toString();
       this.operand = operand.textContent;
     }
@@ -73,6 +77,10 @@ const calc = {
       currentElementValue.textContent = this.currentValue;
     }
     previousElementValue.textContent = this.previousValue + this.operand;
+
+    if (this.currentValue === "0") {
+      this.currentValue = "";
+    }
   },
 };
 
