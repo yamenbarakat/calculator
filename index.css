@@ -78,5 +78,14 @@ body {
     width: 280px;
     margin-top: 30px;
     font-size: 25px;
+    grid-template-rows: repeat(6, 60px);
+  }
+
+  .number,
+  .operation,
+  .del,
+  .equal,
+  .reset {
+    line-height: 60px;
   }
 }
