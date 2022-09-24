@@ -4,6 +4,7 @@ const number = document.querySelectorAll(".number");
 const operation = document.querySelectorAll(".operation");
 const del = document.querySelector(".del");
 const equal = document.querySelector(".equal");
+const reset = document.querySelector(".reset");
 
 const calc = {
   currentValue: "",
@@ -59,6 +60,12 @@ const calc = {
     }
     this.currentValue = this.currentValue.slice(0, -1);
   },
+  
+  reset: function () {
+    this.currentValue = "";
+    this.previousValue = "";
+    this.operand = "";
+  },
 
   equal: function () {
     if (this.currentValue === "" || this.previousValue === "") return;
@@ -104,5 +111,10 @@ del.addEventListener("click", () => {
 
 equal.addEventListener("click", () => {
   calc.equal();
+  calc.display();
+});
+
+reset.addEventListener("click", () => {
+  calc.reset();
   calc.display();
 });
