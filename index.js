@@ -69,6 +69,7 @@ const calc = {
 
   equal: function () {
     if (this.currentValue === "" || this.previousValue === "") return;
+    
     this.currentValue = this.compute(this.currentValue, this.previousValue);
 
     this.operand = "";
