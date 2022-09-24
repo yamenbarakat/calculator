@@ -46,6 +46,10 @@ body {
   height: 40%;
 }
 
+.calc .output .previous {
+  font-size: 20px;
+}
+
 .number,
 .operation,
 .del,
