@@ -91,6 +91,9 @@ const calc = {
 
 number.forEach((num) => {
   num.addEventListener("click", () => {
+    if (calc.currentValue.includes(".") && num.textContent === ".") {
+      return;
+    }
     if (calc.currentValue.length < 15) {
       calc.currentValue += num.textContent;
     }
