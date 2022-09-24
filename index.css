@@ -77,14 +77,6 @@ body {
   .calc {
     width: 280px;
     margin-top: 30px;
-    grid-template-rows: repeat(6, 60px);
-  }
-  
-  .number, .operation, .del, .equal, .reset {
-    line-height: 60px;
-  }
-  
-  .comma {
-    line-height: 48px;
+    font-size: 25px;
   }
 }
