@@ -76,5 +76,7 @@ body {
 @media (max-width: 518px) {
   .calc {
     width: 280px;
+    margin-top: 30px;
+    grid-template-rows: repeat(6, 60px);
   }
 }
