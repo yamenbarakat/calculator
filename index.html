@@ -2,36 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Yamoun</title>
+    <title>Calculator</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="calc">
-      <div class="output">
-        <div class="previous"></div>
-        <div class="current"></div>
-      </div>
-      <div class="number">7</div>
-      <div class="number">8</div>
-      <div class="number">9</div>
-      <div class="operation">÷</div>
-      <div class="number">4</div>
-      <div class="number">5</div>
-      <div class="number">6</div>
-      <div class="operation">×</div>
-      <div class="number">1</div>
-      <div class="number">2</div>
-      <div class="number">3</div>
-      <div class="operation">-</div>
-      <div class="number comma">.</div>
-      <div class="number">0</div>
-      <div class="equal">=</div>
-      <div class="operation">+</div>
-      <div class="reset">Reset</div>
-      <div class="del">DEL</div>
-    </div>
+    <main class="calculator" aria-label="Calculator">
+      <section class="display" aria-live="polite" aria-atomic="true">
+        <p class="display-previous" data-previous></p>
+        <p class="display-current" data-current>0</p>
+      </section>
+
+      <button type="button" class="btn btn-danger" data-action="clear">AC</button>
+      <button type="button" class="btn btn-danger" data-action="delete">DEL</button>
+      <button type="button" class="btn btn-op" data-operation="/">&divide;</button>
+      <button type="button" class="btn btn-op" data-operation="*">&times;</button>
+
+      <button type="button" class="btn" data-number="7">7</button>
+      <button type="button" class="btn" data-number="8">8</button>
+      <button type="button" class="btn" data-number="9">9</button>
+      <button type="button" class="btn btn-op" data-operation="-">-</button>
+
+      <button type="button" class="btn" data-number="4">4</button>
+      <button type="button" class="btn" data-number="5">5</button>
+      <button type="button" class="btn" data-number="6">6</button>
+      <button type="button" class="btn btn-op" data-operation="+">+</button>
+
+      <button type="button" class="btn" data-number="1">1</button>
+      <button type="button" class="btn" data-number="2">2</button>
+      <button type="button" class="btn" data-number="3">3</button>
+      <button type="button" class="btn btn-equal" data-action="equals">=</button>
+
+      <button type="button" class="btn btn-span-2" data-number="0">0</button>
+      <button type="button" class="btn" data-number=".">.</button>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
+
